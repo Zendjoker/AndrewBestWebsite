@@ -222,8 +222,7 @@
     <section class="contact-form-section">
         <div class="container">
             <div class="section-header">
-                <h2>Get Your Free Case Evaluation</h2>
-                <p>Ready to fight for your rights? Fill out our comprehensive form to get started with your case evaluation.</p>
+                <h2>Start Your Case Today</h2>
             </div>
             
             <!-- Contact Form Component -->
@@ -231,28 +230,15 @@
                 <!-- Form will be loaded here -->
             </div>
             
-            <!-- Alternative Contact Options -->
-            <div class="alt-contact">
-                <div class="alt-contact-content">
-                    <h3>Prefer to Talk? Call Us Now</h3>
-                    <p>Available 24/7 for emergency consultations</p>
-                    <div class="contact-options">
-                        <a href="tel:404-948-3311" class="contact-option">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <strong>Call Now</strong>
-                                <span>(404) 948-3311</span>
-                            </div>
-                        </a>
-                        <a href="mailto:info@andrewlawyer.com" class="contact-option">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <strong>Email Us</strong>
-                                <span>info@andrewlawyer.com</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+            <!-- Quick Contact -->
+            <div class="quick-contact">
+                <p>Need immediate assistance?</p>
+                <a href="tel:404-948-3311" class="quick-call-btn">
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    Call (404) 948-3311
+                </a>
             </div>
         </div>
     </section>
@@ -335,10 +321,28 @@
             .then(html => {
                 document.getElementById('contactFormContainer').innerHTML = html;
                 
-                // Load the contact form JavaScript
-                const script = document.createElement('script');
-                script.src = '../components/contact-form.js';
-                document.head.appendChild(script);
+                // Wait a bit for the HTML to be fully inserted
+                setTimeout(() => {
+                    // Load the contact form JavaScript and initialize
+                    const script = document.createElement('script');
+                    script.src = '../components/contact-form.js';
+                    script.onload = function() {
+                        // Wait a bit more and then initialize
+                        setTimeout(() => {
+                            console.log('Attempting to initialize ContactForm...');
+                            if (typeof ContactForm !== 'undefined') {
+                                const contactForm = new ContactForm();
+                                console.log('ContactForm initialized:', contactForm);
+                            } else {
+                                console.error('ContactForm class not found');
+                            }
+                        }, 100);
+                    };
+                    script.onerror = function() {
+                        console.error('Failed to load contact-form.js');
+                    };
+                    document.head.appendChild(script);
+                }, 100);
             })
             .catch(error => {
                 console.error('Error loading contact form:', error);

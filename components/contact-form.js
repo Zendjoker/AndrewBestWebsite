@@ -8,19 +8,33 @@ class ContactForm {
     }
 
     init() {
+        console.log('ContactForm initializing...');
         this.bindEvents();
         this.updateProgress();
-        this.handleConditionalLogic();
+        this.initializeConditionalLogic();
+        console.log('ContactForm initialized successfully');
     }
 
     bindEvents() {
         // Navigation buttons
-        document.querySelectorAll('.btn-next').forEach(btn => {
-            btn.addEventListener('click', () => this.nextStep());
+        const nextButtons = document.querySelectorAll('.btn-next');
+        const prevButtons = document.querySelectorAll('.btn-prev');
+        
+        console.log('Found next buttons:', nextButtons.length);
+        console.log('Found prev buttons:', prevButtons.length);
+        
+        nextButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                console.log('Next button clicked');
+                this.nextStep();
+            });
         });
 
-        document.querySelectorAll('.btn-prev').forEach(btn => {
-            btn.addEventListener('click', () => this.prevStep());
+        prevButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                console.log('Previous button clicked');
+                this.prevStep();
+            });
         });
 
         // Form submission
@@ -53,20 +67,26 @@ class ContactForm {
     }
 
     nextStep() {
+        console.log('nextStep called, current step:', this.currentStep);
         if (this.validateCurrentStep()) {
+            console.log('Validation passed, proceeding to next step');
             this.saveCurrentStepData();
             
             // Handle conditional logic for physical injuries step
             if (this.currentStep === 2 && !this.shouldShowPhysicalInjuries()) {
                 this.currentStep += 2; // Skip step 3
+                console.log('Skipping physical injuries step, jumping to step:', this.currentStep);
             } else {
                 this.currentStep++;
+                console.log('Moving to next step:', this.currentStep);
             }
             
             if (this.currentStep <= this.totalSteps) {
                 this.showStep(this.currentStep);
                 this.updateProgress();
             }
+        } else {
+            console.log('Validation failed, staying on current step');
         }
     }
 
@@ -142,34 +162,44 @@ class ContactForm {
     }
 
     validateField(field) {
-        const value = field.value.trim();
         let isValid = true;
         let errorMessage = '';
 
         // Clear previous errors
         this.clearFieldError(field);
 
-        // Required field validation
-        if (field.hasAttribute('required') && !value) {
-            errorMessage = 'This field is required';
-            isValid = false;
-        }
-
-        // Email validation
-        if (field.type === 'email' && value) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(value)) {
-                errorMessage = 'Please enter a valid email address';
+        // Handle different field types
+        if (field.type === 'checkbox') {
+            // Checkbox validation
+            if (field.hasAttribute('required') && !field.checked) {
+                errorMessage = 'This field is required';
                 isValid = false;
             }
-        }
-
-        // Phone validation
-        if (field.type === 'tel' && value) {
-            const phoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
-            if (!phoneRegex.test(value)) {
-                errorMessage = 'Please enter a valid phone number';
+        } else {
+            const value = field.value.trim();
+            
+            // Required field validation
+            if (field.hasAttribute('required') && !value) {
+                errorMessage = 'This field is required';
                 isValid = false;
+            }
+
+            // Email validation
+            if (field.type === 'email' && value) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    errorMessage = 'Please enter a valid email address';
+                    isValid = false;
+                }
+            }
+
+            // Phone validation
+            if (field.type === 'tel' && value) {
+                const phoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
+                if (!phoneRegex.test(value)) {
+                    errorMessage = 'Please enter a valid phone number';
+                    isValid = false;
+                }
             }
         }
 
@@ -232,6 +262,11 @@ class ContactForm {
             }
         });
         return Array.from(groups);
+    }
+
+    initializeConditionalLogic() {
+        // Initialize the conditional step visibility
+        this.updateStepIndicators();
     }
 
     shouldShowPhysicalInjuries() {
@@ -326,28 +361,33 @@ class ContactForm {
         await new Promise(resolve => setTimeout(resolve, 2000));
         
         // Here you would normally send the data to your backend
-        console.log('Form data:', this.formData);
+        console.log('📋 Final Form Submission Data:');
+        console.log('=================================');
+        Object.entries(this.formData).forEach(([key, value]) => {
+            console.log(`${key}: ${value}`);
+        });
+        console.log('=================================');
         
         // For demo purposes, we'll just resolve successfully
         return { success: true };
     }
 
     showSuccessMessage() {
+        console.log('Showing success message...');
+        
         // Hide form steps
         document.querySelectorAll('.form-step').forEach(step => {
             step.style.display = 'none';
         });
 
-        // Hide progress bar
-        const progressContainer = document.querySelector('.progress-container');
-        if (progressContainer) {
-            progressContainer.style.display = 'none';
-        }
-
         // Show success message
         const successElement = document.querySelector('.form-success');
         if (successElement) {
+            successElement.classList.remove('hidden');
             successElement.classList.add('show');
+            console.log('Success message displayed');
+        } else {
+            console.error('Success element not found');
         }
 
         // Update progress to 100%
@@ -356,6 +396,13 @@ class ContactForm {
         if (progressFill && progressText) {
             progressFill.style.width = '100%';
             progressText.textContent = '100% Completed';
+            console.log('Progress updated to 100%');
+        }
+        
+        // Keep progress bar visible for success state
+        const progressContainer = document.querySelector('.progress-container');
+        if (progressContainer) {
+            progressContainer.style.display = 'block';
         }
     }
 
@@ -392,12 +439,8 @@ class ContactForm {
     }
 }
 
-// Initialize contact form when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    if (document.getElementById('contactForm')) {
-        new ContactForm();
-    }
-});
+// Initialize contact form when called manually (for dynamic loading)
+// Note: Don't auto-initialize since we're loading dynamically
 
 // Export for module use
 if (typeof module !== 'undefined' && module.exports) {

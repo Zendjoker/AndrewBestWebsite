@@ -73,7 +73,7 @@ h4 {
 }
 
 p {
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
     font-size: 1.125rem;
     line-height: 1.8;
     color: var(--lawyer-grey);
@@ -89,6 +89,7 @@ p {
     text-decoration: none;
     border-radius: 15px;
     font-weight: 600;
+    gap: 10px;
     font-size: 1rem;
     transition: all 0.2s ease;
     border: 2px solid transparent;
