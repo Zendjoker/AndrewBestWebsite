@@ -36,17 +36,24 @@
     <!-- Main Navigation -->
     <div class="main-nav">
         <div class="nav-container">
+            <!-- Logo -->
             <div class="nav-logo">
-                <img src="../images/logo1.png" alt="Andrew Lawyer" class="logo-img">
+                <a href="../pages/index.html">
+                    <img src="../images/logo1.png" alt="Andrew Lawyer" class="logo-img">
+                </a>
             </div>
             
-            <div class="nav-menu" id="nav-menu">
+            <!-- Desktop Menu -->
+            <div class="nav-menu desktop-menu">
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a href="../pages/index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link">Practice Areas <i class="arrow-down"></i></a>
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Practice Areas 
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
                         <ul class="dropdown-menu">
                             <li><a href="../pages/car-accidents.html" class="dropdown-link">Car Accidents</a></li>
                             <li><a href="../pages/truck-accidents.html" class="dropdown-link">Truck Accidents</a></li>
@@ -67,15 +74,69 @@
                 </ul>
             </div>
             
-            <div class="nav-cta">
+            <!-- Desktop CTA -->
+            <div class="nav-cta desktop-cta">
                 <a href="../pages/contact.html" class="cta-button">Free Consultation</a>
             </div>
             
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <div class="mobile-logo">
+                    <img src="../images/logo1.png" alt="Andrew Lawyer" class="logo-img">
+                </div>
+                <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close navigation menu">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
+            
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-list">
+                    <li class="mobile-nav-item">
+                        <a href="../pages/index.html" class="mobile-nav-link">Home</a>
+                    </li>
+                    <li class="mobile-nav-item has-submenu">
+                        <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+                            Practice Areas 
+                            <i class="fas fa-chevron-down mobile-arrow"></i>
+                        </a>
+                        <ul class="mobile-submenu">
+                            <li><a href="../pages/car-accidents.html" class="mobile-submenu-link">Car Accidents</a></li>
+                            <li><a href="../pages/truck-accidents.html" class="mobile-submenu-link">Truck Accidents</a></li>
+                            <li><a href="../pages/personal-injury.html" class="mobile-submenu-link">Personal Injury</a></li>
+                            <li><a href="../pages/crime-victim.html" class="mobile-submenu-link">Crime Victim</a></li>
+                            <li><a href="../pages/medical-malpractice.html" class="mobile-submenu-link">Medical Malpractice</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="../pages/results.html" class="mobile-nav-link">Results</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="../pages/testimonials.html" class="mobile-nav-link">Testimonials</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="../pages/contact.html" class="mobile-nav-link">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="mobile-cta">
+                    <a href="../pages/contact.html" class="mobile-cta-button">Free Consultation</a>
+                    <a href="tel:+1234567890" class="mobile-phone-button">
+                        <i class="fas fa-phone"></i>
+                        (123) 456-7890
+                    </a>
+                </div>
+            </nav>
         </div>
     </div>
 </nav>

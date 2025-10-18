@@ -9,6 +9,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="../components/navbar.css">
+    <link rel="stylesheet" href="../components/footer.css">
     <link rel="stylesheet" href="../components/contact-form.css">
     <link rel="stylesheet" href="css/home.css">
     
@@ -20,7 +21,148 @@
 </head>
 <body>
     <!-- Navigation Component -->
-    <div id="navbar-placeholder"></div>
+    <nav class="navbar">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="nav-container">
+                <div class="top-bar-left">
+                    <div class="contact-info">
+                        <a href="tel:+1234567890" class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(123) 456-7890</span>
+                        </a>
+                        <a href="mailto:info@andrewlawyer.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@andrewlawyer.com</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="top-bar-right">
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Follow us on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Follow us on Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Follow us on LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Follow us on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <div class="main-nav">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="../images/logo1.png" alt="Andrew Lawyer" class="logo-img">
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="nav-menu desktop-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Practice Areas 
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="car-accidents.html" class="dropdown-link">Car Accidents</a></li>
+                                <li><a href="truck-accidents.html" class="dropdown-link">Truck Accidents</a></li>
+                                <li><a href="personal-injury.html" class="dropdown-link">Personal Injury</a></li>
+                                <li><a href="crime-victim.html" class="dropdown-link">Crime Victim</a></li>
+                                <li><a href="medical-malpractice.html" class="dropdown-link">Medical Malpractice</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="results.html" class="nav-link">Results</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="testimonials.html" class="nav-link">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Desktop CTA -->
+                <div class="nav-cta desktop-cta">
+                    <a href="contact.html" class="cta-button">Free Consultation</a>
+                </div>
+                
+                <!-- Hamburger Menu Button -->
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <div class="mobile-logo">
+                        <img src="../images/logo1.png" alt="Andrew Lawyer" class="logo-img">
+                    </div>
+                    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close navigation menu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <nav class="mobile-nav">
+                    <ul class="mobile-nav-list">
+                        <li class="mobile-nav-item">
+                            <a href="index.html" class="mobile-nav-link">Home</a>
+                        </li>
+                        <li class="mobile-nav-item has-submenu">
+                            <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+                                Practice Areas 
+                                <i class="fas fa-chevron-down mobile-arrow"></i>
+                            </a>
+                            <ul class="mobile-submenu">
+                                <li><a href="car-accidents.html" class="mobile-submenu-link">Car Accidents</a></li>
+                                <li><a href="truck-accidents.html" class="mobile-submenu-link">Truck Accidents</a></li>
+                                <li><a href="personal-injury.html" class="mobile-submenu-link">Personal Injury</a></li>
+                                <li><a href="crime-victim.html" class="mobile-submenu-link">Crime Victim</a></li>
+                                <li><a href="medical-malpractice.html" class="mobile-submenu-link">Medical Malpractice</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile-nav-item">
+                            <a href="results.html" class="mobile-nav-link">Results</a>
+                        </li>
+                        <li class="mobile-nav-item">
+                            <a href="testimonials.html" class="mobile-nav-link">Testimonials</a>
+                        </li>
+                        <li class="mobile-nav-item">
+                            <a href="contact.html" class="mobile-nav-link">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="mobile-cta">
+                        <a href="contact.html" class="mobile-cta-button">Free Consultation</a>
+                        <a href="tel:+1234567890" class="mobile-phone-button">
+                            <i class="fas fa-phone"></i>
+                            (123) 456-7890
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </nav>
 
 
 
@@ -243,54 +385,8 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Andrew Lawyer</h3>
-                    <p>Trusted legal representation for personal injury cases throughout Georgia.</p>
-                    <div class="footer-contact">
-                        <p><i class="fas fa-phone"></i> (404) 948-3311</p>
-                        <p><i class="fas fa-envelope"></i> info@andrewlawyer.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i> 123 Peachtree St, Atlanta, GA 30309</p>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Practice Areas</h4>
-                    <ul>
-                        <li><a href="car-accidents.html">Car Accidents</a></li>
-                        <li><a href="truck-accidents.html">Truck Accidents</a></li>
-                        <li><a href="personal-injury.html">Personal Injury</a></li>
-                        <li><a href="medical-malpractice.html">Medical Malpractice</a></li>
-                        <li><a href="crime-victim.html">Crime Victim Rights</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Additional Links</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="results.html">Case Results</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Andrew Lawyer. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
 
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top" title="Go to top">
@@ -301,20 +397,8 @@
     <script src="../components/navbar.js"></script>
     <script src="js/home.js"></script>
     
-    <!-- Load Navbar Component -->
-    <script>
-        // Load navbar component
-        fetch('../components/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-                // Initialize navbar functionality after loading
-                const script = document.createElement('script');
-                script.src = '../components/navbar.js';
-                document.head.appendChild(script);
-            })
-            .catch(error => console.error('Error loading navbar:', error));
-            
+    <!-- Load Contact Form Component -->
+    <script>        
         // Load contact form component
         fetch('../components/contact-form.html')
             .then(response => response.text())
@@ -348,6 +432,19 @@
                 console.error('Error loading contact form:', error);
                 document.getElementById('contactFormContainer').innerHTML = 
                     '<div style="text-align: center; padding: 2rem; color: #ef4444;">Error loading contact form. Please refresh the page.</div>';
+            });
+            
+        // Load footer component
+        fetch('../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+                console.log('Footer component loaded');
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+                document.getElementById('footer-placeholder').innerHTML = 
+                    '<div style="text-align: center; padding: 2rem; color: #ef4444;">Error loading footer. Please refresh the page.</div>';
             });
     </script>
 </body>
