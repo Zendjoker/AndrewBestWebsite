@@ -23,90 +23,76 @@
     <!-- Navigation Component -->
     <div id="navbar-placeholder"></div>
 
-    <!-- Contact Hero Section -->
-    <section class="contact-hero">
+    <!-- Combined Contact & Form Section -->
+    <section class="contact-main-section">
         <div class="container">
-            <div class="contact-hero-content">
-                <h1>Get Your Free Family Law Consultation</h1>
-                <p>When your family's future is at stake, don't wait. Contact Andrew Filipour today for experienced legal representation in divorce, child custody, adoption, and all domestic relations matters. We're here to guide you through this challenging time with compassion and expertise.</p>
-                <div class="hero-cta">
-                    <a href="#consultation-form" class="btn-primary large">Schedule Free Consultation</a>
-                    <a href="tel:404-948-3311" class="btn-secondary large">
-                        <i class="fas fa-phone"></i>
-                        Call: (404) 948-3311
-                    </a>
+            <div class="contact-two-column">
+                <!-- Left Column - Contact Information -->
+                <div class="contact-info-column">
+                    <div class="section-header">
+                        <h2>Contact Information</h2>
+                        <p>Multiple ways to reach us for your family law needs</p>
+                    </div>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p><a href="tel:404-948-3311">(404) 948-3311</a></p>
+                                <p class="contact-note">Available for urgent family law matters</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p><a href="mailto:andrew@filipourlaw.com">andrew@filipourlaw.com</a></p>
+                                <p class="contact-note">We respond within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Office Location</h3>
+                                <p>123 Main Street<br>Atlanta, GA 30309</p>
+                                <p class="contact-note">Serving all of Georgia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Office Hours</h3>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p>Saturday: By Appointment</p>
+                                <p class="contact-note">Emergency consultations available</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Information Section -->
-    <section class="contact-info-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact Information</h2>
-                <p>Multiple ways to reach us for your family law needs</p>
-            </div>
-            
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
+                <!-- Right Column - Contact Form -->
+                <div class="contact-form-column" id="consultation-form">
+                    <div class="section-header">
+                        <h2>Schedule Your Free Consultation</h2>
+                        <p>Tell us about your family law matter and we'll get back to you within 24 hours</p>
                     </div>
-                    <div class="contact-details">
-                        <h3>Phone</h3>
-                        <p><a href="tel:404-948-3311">(404) 948-3311</a></p>
-                        <p class="contact-note">Available for urgent family law matters</p>
-                    </div>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Email</h3>
-                        <p><a href="mailto:andrew@filipourlaw.com">andrew@filipourlaw.com</a></p>
-                        <p class="contact-note">We respond within 24 hours</p>
-                    </div>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Office Location</h3>
-                        <p>123 Main Street<br>Atlanta, GA 30309</p>
-                        <p class="contact-note">Serving all of Georgia</p>
-                    </div>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Office Hours</h3>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                        <p>Saturday: By Appointment</p>
-                        <p class="contact-note">Emergency consultations available</p>
-                    </div>
+                    
+                    <!-- Contact Form Component will be loaded here -->
+                    <div id="contact-form-container"></div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section class="contact-form-section" id="consultation-form">
-        <div class="container">
-            <div class="section-header">
-                <h2>Schedule Your Free Consultation</h2>
-                <p>Tell us about your family law matter and we'll get back to you within 24 hours</p>
-            </div>
-            
-            <!-- Contact Form Component will be loaded here -->
-            <div id="contact-form-container"></div>
         </div>
     </section>
 

@@ -13,7 +13,7 @@
     background-color: var(--light-grey);
     color: var(--text-black);
     border-top: 1px solid var(--border-grey);
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
 }
 
 .footer-container {

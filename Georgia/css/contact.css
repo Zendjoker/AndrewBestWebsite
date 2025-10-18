@@ -1,5 +1,39 @@
 /* Contact Page Styles - Following Website Theme */
 
+/* Combined Contact Main Section */
+.contact-main-section {
+    background: var(--light-grey);
+    padding: 8rem 0 6rem;
+    margin-top: 110px;
+}
+
+.contact-two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-info-column .section-header,
+.contact-form-column .section-header {
+    margin-bottom: 3rem;
+}
+
+.contact-info-column .section-header h2,
+.contact-form-column .section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-bottom: 1rem;
+}
+
+.contact-info-column .section-header p,
+.contact-form-column .section-header p {
+    font-size: 1.1rem;
+    color: var(--lawyer-grey);
+    line-height: 1.6;
+}
+
 /* Contact Hero Section */
 .contact-hero {
     background: var(--white);
@@ -39,51 +73,66 @@
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
     margin-top: 3rem;
+}
+
+/* In two-column layout, stack contact cards vertically */
+.contact-info-column .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
 .contact-card {
     background: var(--white);
-    padding: 2.5rem 2rem;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
 }
 
 .contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.12);
 }
 
 .contact-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: var(--lawyer-blue);
     color: var(--white);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
-    font-size: 1.5rem;
+    margin: 0;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.contact-details {
+    flex: 1;
 }
 
 .contact-details h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-black);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .contact-details p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--lawyer-grey);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     max-width: none;
+    line-height: 1.4;
 }
 
 .contact-details a {
@@ -97,9 +146,10 @@
 }
 
 .contact-note {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
     font-style: italic;
+    margin-bottom: 0;
 }
 
 /* Contact Form Section */
@@ -131,7 +181,7 @@
 /* Why Choose Section */
 .why-choose-contact {
     background: var(--light-grey);
-    padding: 6rem 0;
+    padding: 1rem 0;
 }
 
 .why-choose-grid {
@@ -245,6 +295,22 @@
     .contact-hero-content p {
         font-size: 1rem;
         margin-bottom: 1.5rem;
+    }
+    
+    /* Two-column layout mobile responsive */
+    .contact-two-column {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .contact-main-section {
+        padding: 4rem 0 3rem;
+        margin-top: 90px;
+    }
+    
+    .contact-info-column .section-header h2,
+    .contact-form-column .section-header h2 {
+        font-size: 2rem;
     }
     
     .contact-info-section,
