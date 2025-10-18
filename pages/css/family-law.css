@@ -1,0 +1,844 @@
+/* Georgia Family Law Page Styles */
+
+/* Family Law Hero Section */
+.family-law-hero {
+    background: linear-gradient(135deg, var(--light-grey) 0%, var(--white) 100%);
+    padding: 8rem 0 5rem;
+    margin-top: 80px;
+}
+
+.family-law-hero .hero-content {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.family-law-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-black);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.family-law-hero h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--lawyer-red);
+    margin-bottom: 2rem;
+}
+
+.family-law-hero p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--lawyer-grey);
+    margin-bottom: 3rem;
+}
+
+.family-law-hero .hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Family Law Services Section */
+.family-law-services {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: var(--white);
+    border: 2px solid var(--border-grey);
+    border-radius: 12px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.service-card.featured {
+    border-color: var(--lawyer-red);
+    box-shadow: 0 5px 20px rgba(139, 30, 30, 0.1);
+}
+
+.service-card.featured::before {
+    content: "PRIMARY FOCUS";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background: var(--lawyer-red);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 0 10px 0 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--lawyer-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.service-icon i {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--lawyer-grey);
+    margin-bottom: 1.5rem;
+}
+
+.service-details {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.service-details li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    color: var(--text-black);
+}
+
+.service-details i {
+    color: var(--lawyer-blue);
+    width: 16px;
+    font-size: 0.9rem;
+}
+
+.service-cta {
+    display: inline-block;
+    background: var(--lawyer-red);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+/* Why Choose Andrew Section */
+.why-choose-andrew {
+    padding: 6rem 0;
+    background: var(--light-grey);
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.reason-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.reason-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--lawyer-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.reason-icon i {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.reason-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-bottom: 1rem;
+}
+
+.reason-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--lawyer-grey);
+}
+
+/* Family Law Process Section */
+.family-law-process {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.process-timeline {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    position: relative;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border-grey);
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--lawyer-blue);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.step-content h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-bottom: 0.5rem;
+}
+
+.step-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--lawyer-grey);
+}
+
+/* Consultation CTA Section */
+.consultation-cta {
+    padding: 6rem 0;
+    background: var(--light-grey);
+}
+
+.cta-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.cta-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-bottom: 1.5rem;
+}
+
+.cta-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--lawyer-grey);
+    margin-bottom: 2rem;
+}
+
+.consultation-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    color: var(--text-black);
+}
+
+.benefit i {
+    color: var(--lawyer-blue);
+    width: 20px;
+}
+
+.cta-contact {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-methods {
+    margin-bottom: 2rem;
+}
+
+.phone-cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--lawyer-red);
+    color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+}
+
+.phone-cta i {
+    font-size: 1.5rem;
+}
+
+.cta-label {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.cta-number {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.office-location {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--light-grey);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.office-location i {
+    font-size: 1.2rem;
+    color: var(--lawyer-blue);
+}
+
+.location-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--lawyer-grey);
+}
+
+.location-address {
+    display: block;
+    font-weight: 600;
+    color: var(--text-black);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .family-law-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .family-law-hero {
+        padding: 6rem 0 4rem;
+    }
+    
+    .family-law-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .family-law-hero h2 {
+        font-size: 1.3rem;
+    }
+    
+    .family-law-hero .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .reasons-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .cta-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .process-timeline::before {
+        left: 15px;
+    }
+    
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .family-law-hero {
+        padding: 4rem 0 3rem;
+    }
+    
+    .family-law-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .service-card {
+        padding: 2rem;
+    }
+    
+    .service-card.featured::before {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .cta-text h2 {
+        font-size: 2rem;
+    }
+    
+    .phone-cta {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .office-location {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+}
+
+/* New Sections CSS */
+
+/* Why Family Law Matters Section */
+.family-why-matters-section {
+    padding: 5rem 0;
+    background: var(--light-grey);
+}
+
+.family-matters-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.family-matters-content p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--lawyer-grey);
+}
+
+/* Why You Need a Georgia Family Lawyer Section */
+.family-why-need-lawyer-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.family-benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.family-benefit-item {
+    text-align: center;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.family-benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.family-benefit-item i {
+    font-size: 2.5rem;
+    color: var(--lawyer-blue);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.family-benefit-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-bottom: 0.5rem;
+}
+
+.family-benefit-item p {
+    color: var(--lawyer-grey);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Meet Andrew Section */
+.family-meet-andrew-section {
+    padding: 5rem 0;
+    background: var(--light-grey);
+}
+
+.family-andrew-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.family-andrew-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--lawyer-grey);
+    margin-bottom: 1.5rem;
+}
+
+.family-andrew-content p strong {
+    color: var(--lawyer-blue);
+    font-weight: 600;
+}
+
+/* Georgia Family Law Essentials Section */
+.family-georgia-law-essentials {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.family-essentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.family-essential-item {
+    padding: 2rem;
+    background: var(--light-grey);
+    border-radius: 12px;
+    border-left: 4px solid var(--lawyer-red);
+    transition: transform 0.3s ease;
+}
+
+.family-essential-item:hover {
+    transform: translateY(-3px);
+}
+
+.family-essential-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--lawyer-blue);
+    margin-bottom: 1rem;
+}
+
+.family-essential-item p {
+    color: var(--lawyer-grey);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.family-disclaimer-note {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: rgba(31, 60, 136, 0.1);
+    border-radius: 8px;
+}
+
+.family-disclaimer-note p {
+    color: var(--lawyer-blue);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* What to Do Section */
+.family-what-to-do-section {
+    padding: 5rem 0;
+    background: var(--light-grey);
+}
+
+.family-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.family-step-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.family-step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: var(--lawyer-red);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.family-step-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-bottom: 0.5rem;
+}
+
+.family-step-content p {
+    color: var(--lawyer-grey);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Process Section */
+.family-process-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.family-process-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.family-process-step {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: var(--light-grey);
+    border-radius: 12px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.family-process-step:hover {
+    transform: translateY(-5px);
+}
+
+.family-process-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: var(--lawyer-blue);
+    color: var(--white);
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.family-process-icon i {
+    font-size: 2rem;
+}
+
+.family-process-step h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-bottom: 1rem;
+}
+
+.family-process-step p {
+    color: var(--lawyer-grey);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* FAQ Section */
+.family-faq-section {
+    padding: 5rem 0;
+    background: var(--light-grey);
+}
+
+.family-faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.family-faq-item {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.family-faq-item:hover {
+    transform: translateY(-2px);
+}
+
+.family-faq-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--lawyer-blue);
+    margin-bottom: 1rem;
+}
+
+.family-faq-item p {
+    color: var(--lawyer-grey);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 968px) {
+    .family-benefit-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .family-essentials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .family-steps-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .family-process-timeline {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .family-step-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .family-step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .family-why-matters-section,
+    .family-why-need-lawyer-section,
+    .family-meet-andrew-section,
+    .family-georgia-law-essentials,
+    .family-what-to-do-section,
+    .family-process-section,
+    .family-faq-section {
+        padding: 3rem 0;
+    }
+    
+    .family-benefit-item,
+    .family-essential-item,
+    .family-step-item,
+    .family-process-step,
+    .family-faq-item {
+        padding: 1.5rem;
+    }
+    
+    .family-process-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .family-process-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .family-benefit-item i {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .family-law-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    .family-process-step {
+        gap: 1rem;
+    }
+    
+    .cta-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .family-benefit-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .family-process-timeline {
+        grid-template-columns: 1fr;
+    }
+    
+    .family-step-item {
+        gap: 1rem;
+    }
+}

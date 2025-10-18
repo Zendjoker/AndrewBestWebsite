@@ -21,7 +21,7 @@
 .top-bar {
     background-color: var(--lawyer-red);
     color: var(--white);
-    padding: 0.75rem 0;
+    padding: -0.25rem 0;
     font-size: 0.875rem;
     transition: all 0.3s ease;
 }
@@ -33,6 +33,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
+    height: 60px;
 }
 
 .top-bar-left {

@@ -1,0 +1,1461 @@
+/* Practice Areas Pages Styles - Following Website Theme */
+
+/* Practice Area Hero Section */
+.practice-hero {
+    background: var(--white);
+    padding: 8rem 0 6rem;
+    margin-top: 110px;
+    text-align: center;
+}
+
+.practice-hero .hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-bottom: 1rem;
+}
+
+.practice-hero .hero-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--lawyer-red);
+    margin-bottom: 2rem;
+}
+
+.practice-hero .hero-content p {
+    font-size: 1.25rem;
+    color: var(--lawyer-grey);
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+}
+
+.practice-hero .hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Services Section */
+.services-section {
+    background: var(--light-grey);
+    padding: 6rem 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-card.featured {
+    border-color: var(--lawyer-red);
+    border-width: 2px;
+}
+
+.service-card.featured::before {
+    content: "FEATURED SERVICE";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background: var(--lawyer-red);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 0 13px 0 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--lawyer-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.service-icon i {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--lawyer-grey);
+    margin-bottom: 1.5rem;
+}
+
+.service-details {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.service-details li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    color: var(--text-black);
+}
+
+.service-details i {
+    color: var(--lawyer-blue);
+    width: 16px;
+    font-size: 0.9rem;
+}
+
+/* Impact Section */
+.impact-section {
+    background: var(--white);
+    padding: 6rem 0;
+}
+
+.impact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+    align-items: center;
+}
+
+.impact-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.stat-card {
+    background: var(--light-grey);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid var(--border-grey);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--lawyer-red);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--lawyer-grey);
+    font-weight: 600;
+}
+
+.impact-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--lawyer-grey);
+    margin-bottom: 2rem;
+}
+
+.impact-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.impact-text li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    color: var(--text-black);
+}
+
+.impact-text li::before {
+    content: "•";
+    color: var(--lawyer-red);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Laws Section */
+.laws-section {
+    background: var(--light-grey);
+    padding: 6rem 0;
+}
+
+.laws-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.law-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--lawyer-blue);
+}
+
+.law-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-bottom: 1rem;
+}
+
+.law-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--lawyer-grey);
+}
+
+/* Rights Section */
+.rights-section {
+    background: var(--white);
+    padding: 6rem 0;
+}
+
+.rights-content {
+    margin-top: 3rem;
+}
+
+.rights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.right-card {
+    background: var(--light-grey);
+    padding: 2rem;
+    border-radius: 12px;
+    border-top: 4px solid var(--lawyer-red);
+}
+
+.right-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-bottom: 1rem;
+}
+
+.right-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--lawyer-grey);
+}
+
+.warning-signs {
+    background: var(--light-grey);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 2px solid var(--lawyer-red);
+}
+
+.warning-signs h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--lawyer-red);
+    margin-bottom: 1.5rem;
+}
+
+.warning-signs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.warning-signs li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    color: var(--text-black);
+}
+
+.warning-signs li::before {
+    content: "⚠️";
+    font-size: 1rem;
+    margin-top: 0.1rem;
+}
+
+/* Challenges Section */
+.challenges-section {
+    background: var(--light-grey);
+    padding: 6rem 0;
+}
+
+.challenges-content {
+    margin-top: 3rem;
+}
+
+.challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.challenge-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--lawyer-blue);
+}
+
+.challenge-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-bottom: 1rem;
+}
+
+.challenge-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--lawyer-grey);
+}
+
+.approach-text {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.approach-text h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-bottom: 1.5rem;
+}
+
+.approach-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--lawyer-grey);
+    margin-bottom: 2rem;
+}
+
+.approach-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.approach-text li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    color: var(--text-black);
+}
+
+.approach-text li::before {
+    content: "✓";
+    color: var(--lawyer-blue);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Why Choose Section */
+.why-choose-section {
+    background: var(--white);
+    padding: 6rem 0;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.reason-card {
+    background: var(--light-grey);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.reason-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--lawyer-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.reason-icon i {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.reason-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-bottom: 1rem;
+}
+
+.reason-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--lawyer-grey);
+}
+
+/* Contact Info Practice Section */
+.contact-info-practice {
+    background: var(--light-grey);
+    padding: 6rem 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.contact-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--lawyer-blue);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.5rem;
+}
+
+.contact-details h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-bottom: 1rem;
+}
+
+.contact-details p {
+    font-size: 1.1rem;
+    color: var(--lawyer-grey);
+    margin-bottom: 0.5rem;
+}
+
+.contact-details a {
+    color: var(--lawyer-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--lawyer-red);
+}
+
+.contact-note {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Contact Form Section for Practice Pages */
+.contact-form-section {
+    background: var(--white);
+    padding: 6rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .practice-hero {
+        padding: 6rem 0 4rem;
+        margin-top: 90px;
+    }
+    
+    .practice-hero .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .practice-hero .hero-content p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .practice-hero .hero-cta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .services-section,
+    .impact-section,
+    .laws-section,
+    .rights-section,
+    .challenges-section,
+    .why-choose-section,
+    .contact-info-practice,
+    .contact-form-section {
+        padding: 4rem 0;
+    }
+    
+    .services-grid,
+    .laws-grid,
+    .rights-grid,
+    .challenge-grid,
+    .reasons-grid,
+    .contact-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .impact-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .practice-hero {
+        padding: 4rem 0 3rem;
+        margin-top: 80px;
+    }
+    
+    .practice-hero .hero-content h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .practice-hero .hero-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .practice-hero .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .services-section,
+    .impact-section,
+    .laws-section,
+    .rights-section,
+    .challenges-section,
+    .why-choose-section,
+    .contact-info-practice,
+    .contact-form-section {
+        padding: 3rem 0;
+    }
+    
+    .services-grid,
+    .laws-grid,
+    .rights-grid,
+    .challenge-grid,
+    .reasons-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .service-card,
+    .law-card,
+    .right-card,
+    .challenge-card,
+    .reason-card,
+    .contact-card {
+        padding: 1.5rem;
+    }
+    
+    .service-icon,
+    .reason-icon,
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .practice-hero {
+        padding: 3rem 0 2rem;
+    }
+    
+    .practice-hero .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .practice-hero .hero-content p {
+        font-size: 0.95rem;
+    }
+    
+    .service-card,
+    .law-card,
+    .right-card,
+    .challenge-card,
+    .reason-card,
+    .contact-card {
+        padding: 1.25rem;
+    }
+    
+    .service-icon,
+    .reason-icon,
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Business Law Specific Styles */
+
+/* What We Handle Section */
+.business-what-we-handle-section {
+    padding: 6rem 0;
+    background: var(--light-grey);
+}
+
+.business-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.business-service-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.business-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.business-service-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: var(--lawyer-blue);
+    color: var(--white);
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.business-service-icon i {
+    font-size: 1.8rem;
+}
+
+.business-service-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-bottom: 1rem;
+}
+
+.business-service-card p {
+    color: var(--lawyer-grey);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Fast Relief Section */
+.business-fast-relief-section {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.business-relief-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.business-relief-item {
+    background: var(--light-grey);
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    border-left: 4px solid var(--lawyer-red);
+    transition: transform 0.3s ease;
+}
+
+.business-relief-item:hover {
+    transform: translateY(-3px);
+}
+
+.business-relief-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: var(--lawyer-red);
+    color: var(--white);
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.business-relief-icon i {
+    font-size: 2rem;
+}
+
+.business-relief-item h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-bottom: 1rem;
+}
+
+.business-relief-item p {
+    color: var(--lawyer-grey);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Why Choose Andrew Section */
+.business-why-choose-section {
+    padding: 6rem 0;
+    background: var(--light-grey);
+}
+
+.business-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.business-choose-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.business-choose-item:hover {
+    transform: translateY(-5px);
+}
+
+.business-choose-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: var(--lawyer-blue);
+    color: var(--white);
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.business-choose-icon i {
+    font-size: 1.8rem;
+}
+
+.business-choose-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-bottom: 1rem;
+}
+
+.business-choose-item p {
+    color: var(--lawyer-grey);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Engagement Flow Section */
+.business-engagement-flow-section {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.business-flow-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.business-flow-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: var(--light-grey);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.business-flow-step:hover {
+    transform: translateY(-3px);
+}
+
+.business-flow-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--lawyer-red);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 1.4rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.business-flow-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-black);
+    margin-bottom: 0.5rem;
+}
+
+.business-flow-content p {
+    color: var(--lawyer-grey);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Damages Section */
+.business-damages-section {
+    padding: 6rem 0;
+    background: var(--light-grey);
+}
+
+.business-damages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.business-damage-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.business-damage-item:hover {
+    transform: translateY(-3px);
+}
+
+.business-damage-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--lawyer-blue);
+    margin-bottom: 1rem;
+}
+
+.business-damage-item p {
+    color: var(--lawyer-grey);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Evidence Section */
+.business-evidence-section {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.business-evidence-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.business-evidence-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--light-grey);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.business-evidence-item:hover {
+    transform: translateX(5px);
+}
+
+.business-evidence-item i {
+    font-size: 1.5rem;
+    color: var(--lawyer-blue);
+    width: 30px;
+    text-align: center;
+}
+
+.business-evidence-item span {
+    color: var(--text-black);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Industries Section */
+.business-industries-section {
+    padding: 6rem 0;
+    background: var(--light-grey);
+    text-align: center;
+}
+
+.business-industries-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.business-industry-tag {
+    background: var(--lawyer-blue);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.business-industry-tag:hover {
+    transform: translateY(-2px);
+    background: var(--lawyer-red);
+}
+
+/* FAQ Section */
+.business-faq-section {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.business-faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.business-faq-item {
+    background: var(--light-grey);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--lawyer-blue);
+    transition: transform 0.3s ease;
+}
+
+.business-faq-item:hover {
+    transform: translateY(-2px);
+}
+
+.business-faq-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--lawyer-blue);
+    margin-bottom: 1rem;
+}
+
+.business-faq-item p {
+    color: var(--lawyer-grey);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Call to Action Section */
+.business-cta-section {
+    padding: 6rem 0;
+    background: var(--lawyer-blue);
+    color: var(--white);
+    text-align: center;
+}
+
+.business-cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.business-cta-section .section-header h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.business-cta-section .section-header p {
+    color: var(--white);
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.business-cta-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.business-cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.business-cta-buttons .btn-primary,
+.business-cta-buttons .btn-secondary {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.business-cta-buttons .btn-primary {
+    background: var(--lawyer-red);
+    border-color: var(--lawyer-red);
+}
+
+.business-cta-buttons .btn-primary:hover {
+    background: #6d1515;
+    border-color: #6d1515;
+}
+
+.business-cta-buttons .btn-secondary {
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.business-cta-buttons .btn-secondary:hover {
+    background: var(--white);
+    color: var(--lawyer-blue);
+}
+
+/* Responsive Design for Business Law Sections */
+@media (max-width: 968px) {
+    .business-services-grid,
+    .business-relief-grid,
+    .business-choose-grid,
+    .business-flow-timeline,
+    .business-damages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .business-evidence-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .business-flow-step {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .business-what-we-handle-section,
+    .business-fast-relief-section,
+    .business-why-choose-section,
+    .business-engagement-flow-section,
+    .business-damages-section,
+    .business-evidence-section,
+    .business-industries-section,
+    .business-faq-section,
+    .business-cta-section {
+        padding: 4rem 0;
+    }
+    
+    .business-service-card,
+    .business-relief-item,
+    .business-choose-item,
+    .business-flow-step,
+    .business-damage-item,
+    .business-faq-item {
+        padding: 1.5rem;
+    }
+    
+    .business-service-icon,
+    .business-relief-icon,
+    .business-choose-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .business-service-icon i,
+    .business-relief-icon i,
+    .business-choose-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .business-flow-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .business-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .business-cta-buttons .btn-primary,
+    .business-cta-buttons .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Enhanced Traditional Business Services Section */
+.business-traditional-services-section {
+    padding: 6rem 0;
+    background: var(--white);
+    position: relative;
+}
+
+.business-traditional-services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--lawyer-blue), var(--lawyer-red), var(--lawyer-blue));
+}
+
+.business-traditional-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.business-traditional-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 0;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--light-grey);
+}
+
+.business-traditional-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--lawyer-grey);
+    transition: background 0.3s ease;
+}
+
+.business-traditional-card.featured::before {
+    background: linear-gradient(90deg, var(--lawyer-blue), var(--lawyer-red));
+}
+
+.business-traditional-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.2);
+}
+
+.business-traditional-card:hover::before {
+    background: linear-gradient(90deg, var(--lawyer-red), var(--lawyer-blue));
+}
+
+.business-traditional-header {
+    background: linear-gradient(135deg, var(--light-grey) 0%, rgba(248, 250, 252, 0.8) 100%);
+    padding: 2.5rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.business-traditional-card.featured .business-traditional-header {
+    background: linear-gradient(135deg, rgba(31, 60, 136, 0.08) 0%, rgba(139, 30, 30, 0.05) 100%);
+}
+
+.business-traditional-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: var(--lawyer-blue);
+    color: var(--white);
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.business-traditional-icon::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--lawyer-blue), var(--lawyer-red));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.business-traditional-card:hover .business-traditional-icon::after {
+    opacity: 1;
+}
+
+.business-traditional-icon.debt-collection {
+    background: var(--lawyer-red);
+}
+
+.business-traditional-icon.litigation {
+    background: linear-gradient(135deg, var(--lawyer-blue), #2563eb);
+}
+
+.business-traditional-icon.defense {
+    background: linear-gradient(135deg, var(--lawyer-grey), #4b5563);
+}
+
+.business-traditional-icon i {
+    font-size: 2.2rem;
+    z-index: 1;
+}
+
+.business-traditional-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.business-traditional-description {
+    padding: 0 2rem;
+    margin: 1.5rem 0;
+    color: var(--lawyer-grey);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.business-traditional-services {
+    padding: 0 2rem 2rem;
+}
+
+.business-service-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(75, 75, 75, 0.1);
+    transition: all 0.3s ease;
+}
+
+.business-service-item:last-child {
+    border-bottom: none;
+}
+
+.business-service-item:hover {
+    padding-left: 0.5rem;
+    background: rgba(31, 60, 136, 0.02);
+    border-radius: 6px;
+    border-bottom-color: transparent;
+}
+
+.business-service-item i {
+    color: var(--lawyer-blue);
+    font-size: 1rem;
+    width: 16px;
+    flex-shrink: 0;
+    transition: color 0.3s ease;
+}
+
+.business-traditional-card.featured .business-service-item i {
+    color: var(--lawyer-red);
+}
+
+.business-service-item span {
+    color: var(--text-black);
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.business-traditional-cta {
+    padding: 0 2rem 2.5rem;
+    text-align: center;
+}
+
+.business-service-btn {
+    display: inline-block;
+    background: var(--lawyer-blue);
+    color: var(--white);
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--lawyer-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.business-service-btn:hover {
+    background: transparent;
+    color: var(--lawyer-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(31, 60, 136, 0.3);
+}
+
+.business-traditional-card.featured .business-service-btn {
+    background: var(--lawyer-red);
+    border-color: var(--lawyer-red);
+}
+
+.business-traditional-card.featured .business-service-btn:hover {
+    background: transparent;
+    color: var(--lawyer-red);
+    box-shadow: 0 4px 15px rgba(139, 30, 30, 0.3);
+}
+
+/* Responsive Design for Traditional Services */
+@media (max-width: 968px) {
+    .business-traditional-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+    
+    .business-traditional-header {
+        padding: 2rem 1.5rem 1.5rem;
+    }
+    
+    .business-traditional-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .business-traditional-icon i {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .business-traditional-services-section {
+        padding: 4rem 0;
+    }
+    
+    .business-traditional-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+    }
+    
+    .business-traditional-card {
+        margin: 0 1rem;
+    }
+    
+    .business-traditional-header {
+        padding: 1.5rem 1rem 1rem;
+    }
+    
+    .business-traditional-description,
+    .business-traditional-services,
+    .business-traditional-cta {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .business-traditional-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .business-traditional-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .business-traditional-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .business-service-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
